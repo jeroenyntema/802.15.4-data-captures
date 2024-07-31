@@ -10,7 +10,9 @@ The data has been captured using an ADALM Pluto SDR.
 
 As part of the research setup, a specific frame type was selected for further research for each device. For example for the Innr smart plug the "Data" frame has been selected as input for further research. Initial data captures of several seconds contained multiple signal spikes. A combination of Wireshark, GNU radio and Universal radio hacker has been used to select the proper frame types. Each signal in this github repository represents one 802.15.4 frame for a specific device.
 
-On the data no further pre-processing has taken place; this is done locally as part of the research. The number of frames per device differs because the size per frame per device is different and the aim was to arrive at 1000 data patches per device of 1024 data points each.
+The data is stored in the github repository as interleaved IQ data, which will be addressed in the research as part of pre-processing. On the data in the repository no pre-processing has taken place yet; this is done locally as part of the research. 
+
+The number of frames per device differs because the size per frame per device is different and the aim was to arrive at 1000 data patches per device of 1024 data points each.
 
 Sample rate used is 4MHz for all devices. Bandwidth was 2.5 MHz for all devices.
 
