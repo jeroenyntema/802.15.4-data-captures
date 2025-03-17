@@ -2,17 +2,19 @@
 
 ## Context
 
-This data has been created as part of my thesis for the master degree Software Engineering. The research that the data is part of aims to determine whether the different signals can be classified correctly by several convolutional neural networks. The data has been placed on github to make sure it does not go lost, but also to make my research auditable and allow data to be inspected by those reviewing the thesis.
+This data has been created as part of a thesis for the master degree Software Engineering. The research that the data is part of aims to determine whether the different signals can be classified correctly by convolutional neural networks. The data has been placed on github to make sure it does not go lost, but also to make the research auditable and allow data to be inspected by those reviewing the thesis.
 
 ## Technical properties of the data
 
 The data has been captured using an ADALM Pluto SDR.
 
-As part of the research setup, a specific frame type was selected for further research for each device. For example for the Innr smart plug the "Data" frame has been selected as input for further research. Initial data captures of several seconds contained multiple signal spikes. A combination of Wireshark, GNU radio and Universal radio hacker has been used to select the proper frame types. Each signal in this github repository represents one 802.15.4 frame for a specific device.
+In line with the intended research setup, a specific frame type was selected for each device. For example for the Innr smart plug the "Data" frame has been selected.
 
-The data is stored in the github repository as interleaved IQ data, which will be addressed in the research as part of pre-processing. On the data in the repository no pre-processing has taken place yet; this is done locally as part of the research. 
+The initial data captures were several seconds in size and contained multiple signal spikes. A combination of Wireshark, GNU radio and Universal radio hacker has been used to extract the intended frame types. Each signal in this github repository represents one 802.15.4 frame for a specific device.
 
-The number of frames per device differs because the size per frame per device is different and the aim was to arrive at 1000 data patches per device of 1024 data points each.
+The data is stored in the github repository as interleaved IQ data. This data will be further (pre-)processed before it is used as input for the CNNs. Only the "raw" data is shared via this repository.
+
+The number of data frames collected for each device differs. This was because the aim was to arrive at 1000 data patches for each device, of 1024 data points each. Because the size per frame per device is different, different numbers of samples were required to arrive a the same number of data patches.
 
 Sample rate used is 4MHz for all devices. Bandwidth was 2.5 MHz for all devices.
 
@@ -21,6 +23,7 @@ Devices:
 + Philips Hue bridge (Frequency used was 2.425 GHz)
 + Innr smart plug (Frequency used was 2.425 GHz)
 + AEOTEC open/close door sensor (Frequency used was 2.405 GHz)
++ Endress+Hauser SWG50 FieldGate (WirelessHart; various channels in the 2.4x GHz range)
 
 
 ## License
